@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Our_Project</title>
+  <style>
+    /* 1. 全局重置与多层级排版体系 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: #FFFFF3;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth; /* 让全页面的锚点跳转拥有原生丝滑动效 */
+    }
+
+    /* 2. 外层包裹层：提供相对视口的全屏沉浸体验 */
+    .timeline-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      background-color: #FFFFF3;
+      padding: 60px 0 200px 0;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e5e5d8;
+      /* 自定义精致滚动条 */
+      scrollbar-width: thin;
+      scrollbar-color: #2c3e50 #FFFFF3;
+    }
+    .timeline-wrapper::-webkit-scrollbar {
+      height: 6px;
+    }
+    .timeline-wrapper::-webkit-scrollbar-thumb {
+      background-color: #2c3e50;
+      border-radius: 3px;
+    }
+
+    /* 3. 轴线轨道：min-width改用max-content，防止20个项目内部相互挤压变形 */
+    .timeline-axis {
+      display: inline-flex; /* 核心：让容器宽度随子项无限延伸 */
+      align-items: center; 
+      position: relative;
+      padding: 140px 100px; /* 增大上下内边距，给悬浮窗留足显示空间 */
+      min-width: max-content; 
+    } 
+
+    /* 4. 动态黑线定位 */
+    .timeline-axis::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #000000;
+      z-index: 1;
+    }
+    
+    /* 5. 单个节点单元 */
+    .timeline-item {
+      margin-top: 100px;
+      position: relative;
+      width: 280px; /* 给定每个项目的固定基础宽度 */
+      flex-shrink: 0; /* 绝对不允许被Flex机制压缩宽度 */
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 鼠标移入节点微放大，并提高层级，防止悬浮卡片被邻近节点遮挡 */
+    .timeline-item:hover {
+      transform: scale(1.04);
+      z-index: 15;
+    }
+
+    /* 激活状态样式（用于默认初始化项） */
+    .timeline-item.active .marker {
+      background-color: #e74c3c;
+      box-shadow: 0 0 0 4px #e74c3c;
+    }
+
+    /* 6. 节点菱形圆点 */
+    .marker {
+      width: 12px;
+      height: 12px;
+      background-color: #2c3e50;
+      border: 4px solid #FFFFF3;
+      z-index: 2;
+      box-shadow: 0 0 0 2px #000;
+      transform: rotate(45deg);
+      margin-bottom: 15px; 
+      transition: all 0.2s ease;
+    }
+    .timeline-item:hover .marker {
+      background-color: #e74c3c;
+      transform: rotate(135deg) scale(1.1);
+    }
+
+    /* 7. 时间/标签 */
+    .time-label {
+      font-weight: bold;
+      background-color: #fff;
+      color: #000;
+      font-size: 13px;
+      margin-bottom: 8px;
+      box-shadow: 2px 2px 0px #2c3e50;
+      padding: 3px 8px;
+      border: 1px solid #000;
+      letter-spacing: 0.5px;
+    }    
+    
+    /* 8. 轴线上简短内容区 */
+    .content {
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    .content h3 {
+      margin: 0 0 6px 0;
+      font-size: 15px;
+      color: #2c3e50;
+      font-weight: 700;
+    }
+    .content p {
+      margin: 0;
+      font-size: 13px;
+      color: #666;
+      line-height: 1.4;
+    }
+    
+    /* 9. 奇偶项交替上下颠倒 */
+    .timeline-item:nth-child(even) {
+      flex-direction: column-reverse;
+      margin-top: -100px;
+    }
+    .timeline-item:nth-child(even) .marker {
+      margin-bottom: 0;   
+      margin-top: 15px;  
+    }
+
+    /* 10. Wikipedia 风格弹出式悬浮预览框 (Tooltip) */
+    .tooltip {
+      position: absolute;
+      width: 260px;
+      background: #ffffff;
+      border: 1px solid #a2a9b1;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-size: 13px;
+      color: #202122;
+      text-align: left;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 50;
+      border-radius: 2px;
+    }
+    .tooltip-title {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #000;
+      border-bottom: 1px solid #a2a9b1;
+      padding-bottom: 4px;
+    }
+    .tooltip-img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      margin-bottom: 8px;
+      background-color: #f8f9fa;
+    }
+    
+    /* 奇数项（轴线下方项）悬浮窗置于上方 */
+    .timeline-item:nth-child(odd) .tooltip {
+      bottom: 100%;
+      margin-bottom: 25px;
+      transform: translateY(10px);
+    }
+    /* 偶数项（轴线上方项）悬浮窗置于下方 */
+    .timeline-item:nth-child(even) .tooltip {
+      top: 100%;
+      margin-top: 25px;
+      transform: translateY(-10px);
+    }
+
+    /* Hover 触发激活动画 */
+    .timeline-item:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* 11. 下方：Wikipedia 主题条目详情区 */
+    .wiki-container {
+      max-width: 1100px;
+      margin: 50px auto 100px auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
+    
+    .wiki-main-title {
+      font-size: 32px;
+      font-family: "Georgia", serif;
+      border-bottom: 1px solid #a2a9b1;
+      padding-bottom: 8px;
+      margin-bottom: 40px;
+      color: #000;
+    }
+
+    /* 单个 Wiki 词条小节 */
+    .wiki-section {
+      display: flex;
+      gap: 40px;
+      padding: 40px 0;
+      border-bottom: 1px solid #eaecf0;
+      scroll-margin-top: 40px; /* 让高亮跳转定位时，顶部留出优雅的呼吸空间 */
+      transition: background-color 0.5s ease;
+    }
+    /* 触发跳转高亮提示特效 */
+    .wiki-section.highlight-flash {
+      background-color: #f8f9fa;
+      animation: flashEffect 1.5s ease-out;
+    }
+    @keyframes flashEffect {
+      0% { background-color: rgba(231, 76, 60, 0.15); }
+      100% { background-color: transparent; }
+    }
+
+    /* 左侧核心长文叙述区 */
+    .wiki-body {
+      flex: 1;
+    }
+    .wiki-body h2 {
+      font-family: "Georgia", serif;
+      font-size: 24px;
+      font-weight: normal;
+      color: #000;
+      margin-top: 0;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #a2a9b1;
+      padding-bottom: 4px;
+    }
+    .wiki-body .wiki-intro {
+      font-weight: bold;
+      color: #202122;
+      margin-bottom: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .wiki-body .wiki-text {
+      font-size: 15px;
+      color: #202122;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* 右侧经典 Wikipedia 样式信息卡（Infobox） */
+    .wiki-infobox {
+      width: 290px;
+      flex-shrink: 0;
+      background-color: #f8f9fa;
+      border: 1px solid #a2a9b1;
+      border-collapse: collapse;
+      padding: 12px;
+      font-size: 13px;
+      align-self: flex-start; /* 锁死顶部对齐，防止被左侧长文强行拉长 */
+    }
+    .infobox-title {
+      background-color: #eaecf0;
+      font-weight: bold;
+      text-align: center;
+      padding: 8px;
+      font-size: 14px;
+      border-bottom: 1px solid #a2a9b1;
+    }
+    .infobox-image-box {
+      text-align: center;
+      padding: 10px 0;
+    }
+    .infobox-image-box img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border: 1px solid #c8ccd1;
+    }
+    .infobox-table {
+      width: 100%;
+      border-spacing: 0;
+      margin-top: 8px;
+    }
+    .infobox-table th {
+      text-align: left;
+      padding: 6px 4px;
+      width: 35%;
+      color: #54595d;
+      vertical-align: top;
+      border-top: 1px solid #eaecf0;
+    }
+    .infobox-table td {
+      padding: 6px 4px;
+      color: #202122;
+      border-top: 1px solid #eaecf0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="timeline-wrapper" id="timeline-wrapper">
+    <nav class="timeline-axis" id="timeline-axis">
+      </nav>
+  </div>
+
+  <div class="wiki-container">
+    <h1 class="wiki-main-title">条目详细引证文献</h1>
+    <div id="wiki-sections-wrapper">
+      </div>
+  </div>
+
+  <script>
+    // 执行动态初始化的主函数
+    async function initTimeline() {
+      try {
+        // 1. 异步抓取同级目录下的 data.json 配置文件
+        const response = await fetch('data.json');
+        const data = await response.json();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+       // const data = ;
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const timelineAxis = document.getElementById('timeline-axis');
+        const wikiWrapper = document.getElementById('wiki-sections-wrapper');
+
+       
+        data.forEach((item, index) => {
+          
+         
+          const itemHtml = `
+            <div class="timeline-item" id="nav-${item.id}" data-target="${item.id}">
+              <div class="marker"></div>
+              <time class="time-label">${item.time}</time>
+              <section class="content">
+                <h3>${item.name}</h3>
+                <p>${item.intro.substring(0, 18)}...</p>
+              </section>
+              <div class="tooltip">
+                ${item.image ? `<img class="tooltip-img" src="${item.image}" alt="${item.name}">` : ''}
+                <div class="tooltip-title">${item.name}</div>
+                <div>${item.intro}</div>
+              </div>
+            </div>
+          `;
+          timelineAxis.insertAdjacentHTML('beforeend', itemHtml);
+
+         
+          const sectionHtml = `
+            <section class="wiki-section" id="${item.id}">
+              <div class="wiki-body">
+                <h2>${item.name}</h2>
+                <div class="wiki-intro">${item.intro}</div>
+                <div class="wiki-text"><p>${item.detail}</p></div>
+              </div>
+              
+              <aside class="wiki-infobox">
+                <div class="infobox-title">${item.name}</div>
+                ${item.image ? `
+                  <div class="infobox-image-box">
+                    <img src="${item.image}" alt="${item.name}">
+                  </div>
+                ` : ''}
+             
+                
+              </aside>
+            </section>
+          `;
+          wikiWrapper.insertAdjacentHTML('beforeend', sectionHtml);
+        });
+
+        // 3. 注册点击节点精准滑移联动事件
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach(item => {
+          item.addEventListener('click', () => {
+            const targetId = item.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              // 改变顶部对应导航点的选中高亮状态
+              timelineItems.forEach(i => i.classList.remove('active'));
+              item.classList.add('active');
+
+              // 平滑滚动定位到下方对应位置
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+              // 赋予一个短暂醒目的背景渐变闪烁提示特效
+              targetElement.classList.add('highlight-flash');
+              setTimeout(() => {
+                targetElement.classList.remove('highlight-flash');
+              }, 1500);
+            }
+          });
+        });
+
+        // 4. 🚀 满足需求：“默认状态进入第二个项目，并且全屏时间线滚动”
+        if (data.length >= 2) {
+          const defaultIndex = 1; // 索引1代表第2项
+          const defaultItem = timelineItems[defaultIndex];
+          const defaultData = data[defaultIndex];
+
+          // A. 标记其高亮状态
+          defaultItem.classList.add('active');
+
+          // B. 页面下方详情立刻瞬间定位到第二个词条，避免初始白屏或错位
+          const defaultSection = document.getElementById(defaultData.id);
+          if (defaultSection) {
+            defaultSection.scrollIntoView({ behavior: 'auto', block: 'start' });
+          }
+
+          // C. 核心细节：自动计算偏移动态定位，让上方的横向滚动条自动卷动，使第2项完美居中展现
+          setTimeout(() => {
+            const wrapper = document.getElementById('timeline-wrapper');
+            const itemOffsetLeft = defaultItem.offsetLeft;
+            const itemWidth = defaultItem.offsetWidth;
+            const wrapperWidth = wrapper.offsetWidth;
+            // 滚动到该节点居中时的真实位移
+            wrapper.scrollLeft = itemOffsetLeft - (wrapperWidth / 2) + (itemWidth / 2);
+          }, 100);
+        }
+
+      } catch (error) {
+        console.error('动态构建轴线框架时发生致命异常:', error);
+      }
+    }
+
+    // 当DOM树准备就绪时自动拉取并执行渲染逻辑
+    window.addEventListener('DOMContentLoaded', initTimeline);
+  </script>
+</body>
+</html>

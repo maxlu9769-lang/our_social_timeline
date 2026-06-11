@@ -1,70 +1,6 @@
 [
   {
     "id": "item1",
-    "time": " 1300–1350 ",
-    "name": "The Black Death",
-    "intro": "A catastrophic plague that claimed millions of lives, shrouding Europe in fear. Doctors wore bird-masked masks based on limited knowledge.",
-    "detail": "The Black Death, which broke out in the 14th century, was the most devastating plague in European history. At the time, medicine was primitive, and people knew nothing about how the virus spread. Those infected developed symptoms such as high fever and lumps, and died rapidly within days. This catastrophe claimed tens of millions of lives, reduced countless towns to ruins, and shrouded the entire country in fear of divine retribution. Doctors wore bird-beak masks, believing this would prevent infection—a undoubtedly flawed decision given the limited medical knowledge available at the time.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Paul_F%C3%BCrst%2C_Der_Doctor_Schnabel_von_Rom_%28coloured_version%29.png/250px-Paul_F%C3%BCrst%2C_Der_Doctor_Schnabel_von_Rom_%28coloured_version%29.png"
-  },
-  {
-    "id": "item2",
-    "time": " 700s-1300s ",
-    "name": "Islam (World's Three Major Religions)",
-    "intro": "Unifying the Arab Peninsula and shaping global culture through science and art. It is a complete framework for society, politics, and daily life.",
-    "detail": "Islam, one of the world's three major religions, has profoundly shaped the global religious, political, economic, and cultural landscape. It not only unified the Arabian Peninsula but also created a flourishing Islamic civilization in the Middle Ages, exerting a profound influence on human society in the fields of science, art, and philosophy. Islamic doctrine is not merely a belief system but constitutes a complete framework encompassing society, politics, and daily life.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Supplicating_Pilgrim_at_Masjid_Al_Haram._Mecca%2C_Saudi_Arabia.jpg/330px-Supplicating_Pilgrim_at_Masjid_Al_Haram._Mecca%2C_Saudi_Arabia.jpg"
-  },
-  {
-    "id": "item3",
-    "time": " 1837–1901 ",
-    "name": "The British Empire",
-    "intro": "Known as \"the sun never sets,\" its rise was built on slave trade and colonial expansion. Today, it remains a loose union with unresolved museum debates.",
-    "detail": "The British Empire, once the largest empire in history, was known as the \"Empire on which the sun never sets.\" Its rise was built on the slave trade and the East India Company. During the Victorian era, as European powers carved up Africa, the British Empire reached its zenith. Britain gained independence in 1947; Hong Kong returned to China in 1997. Today, the Commonwealth is a loose union, but the debate over whether the British Museum should return its collections remains unresolved.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/330px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
-  },
-  {
-    "id": "item4",
-    "time": " 1630-1636",
-    "name": "Nurhaci (Later Jin Dynasty)",
-    "intro": "Rising from the Jurchen people through rebellion and dynastic change, establishing a nationwide regime during the Ming dynasty's fall.",
-    "detail": "Nurhaci started his rebellion with thirteen suits of armor, unified the Jurchen people, and established the Later Jin dynasty. His son, Huang Taiji, changed the dynasty name to Qing and the ethnic name to Manchu. During the reign of Emperor Shunzhi, taking advantage of Li Zicheng's entry into Beijing and the fall of the Ming dynasty, the Qing army entered the pass and seized the opportunity to establish a nationwide regime.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/%E6%B8%85_%E4%BD%9A%E5%90%8D_%E3%80%8A%E6%B8%85%E5%A4%AA%E7%A5%96%E5%A4%A9%E5%91%BD%E7%9A%87%E5%B8%9D%E6%9C%9D%E6%9C%8D%E5%83%8F%E3%80%8B_1361x1869.jpg/960px-%E6%B8%85_%E4%BD%9A%E5%90%8D_%E3%80%8A%E6%B8%85%E5%A4%AA%E7%A5%96%E5%A4%A9%E5%91%BD%E7%9A%87%E5%B8%9D%E6%9C%9D%E6%9C%8D%E5%83%8F%E3%80%8B_1361x1869.jpg"
-  },
-  {
-    "id": "item5",
-    "time": " 1700–1840 ",
-    "name": "Trade of qing goods",
-    "intro": "In the 18th century, the Qing Dynasty was the ultimate engine of global commerce. Driven by an insatiable Western demand for tea, silk, and porcelain, China maintained a massive trade surplus that effectively reshaped the world economy.",
-    "detail": "In the 18th century, the Qing Dynasty was the ultimate engine of global commerce. Driven by an insatiable Western demand for tea, silk, and porcelain, China maintained a massive trade surplus that effectively reshaped the world economy.//nThe Silver Magnet: To buy Chinese goods, European and American merchants drained the silver mines of the New World. This massive flow of bullion created the first truly globalized, interdependent monetary network centered around Chinese demand.//nGeopolitical Realignment: The desperate British need to stop this \"silver drain\" led directly to the cultivation of opium in India, flipping global trade routes and triggering the rise of modern industrial empires.//nUltimately, before the Industrial Revolution, the gravity of the global economy centered firmly on the Chinese marketplace, pulling the wealth of the entire planet into its orbit.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/UrumqiWarrior.jpg/120px-UrumqiWarrior.jpg"
-  },
-  {
-    "id": "item6",
-    "time": " 1839–1842 ",
-    "name": "Opium war",
-    "intro": "The Opium War (1839–1842) was a pivotal turning point that violently dragged the Qing Dynasty into the modern global era. Driven by British merchants smuggling opium into China to reverse a massive trade deficit, the drug crisis quickly devastated Chinese society and drained the empire's silver reserves.",
-    "detail": "The Opium War (1839–1842) was a pivotal turning point that violently dragged the Qing Dynasty into the modern global era. Driven by British merchants smuggling opium into China to reverse a massive trade deficit, the drug crisis quickly devastated Chinese society and drained the empire's silver reserves.//nIn 1839, the Qing government took a stand. Emperor Daoguang appointed Lin Zexu (林则徐) as a special commissioner to Guangzhou. Lin acted aggressively, confiscating and destroying over 20,000 chests of British opium at Humen beach.//nBritain responded with gunboat diplomacy. Utilizing advanced steam-powered warships and modern artillery, the British military easily overwhelmed the outdated Qing forces along the coast.//nThe conflict ended with the Treaty of Nanjing (1842), the first of the \"Unequal Treaties.\" It forced the Qing Dynasty to:",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Destroying_Chinese_war_junks%2C_by_E._Duncan_%281843%29.jpg/330px-Destroying_Chinese_war_junks%2C_by_E._Duncan_%281843%29.jpg"
-  },
-  {
-    "id": "item7",
-    "time": " 1839 ",
-    "name": "Destruction of opium at Humen ",
-    "intro": "The Destruction of Opium at Humen (June 3 – June 25, 1839) was a monumental event in modern Chinese history, signaling the first major resistance against foreign encroachment and the illegal drug trade. Conducted by Imperial Commissioner Lin Zexu (林则徐) on the beaches of Humen, Guangdong, the 23-day operation successfully destroyed nearly 2.4 million pounds of illegal opium confiscated from British and American smugglers.",
-    "detail": "The Destruction of Opium at Humen (June 3 – June 25, 1839) was a monumental event in modern Chinese history, signaling the first major resistance against foreign encroachment and the illegal drug trade. Conducted by Imperial Commissioner Lin Zexu (林则徐) on the beaches of Humen, Guangdong, the 23-day operation successfully destroyed nearly 2.4 million pounds of illegal opium confiscated from British and American smugglers.//nWhile a massive triumph for anti-narcotics, this bold act directly triggered the First Opium War.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Destruction_of_opium_in_1839.jpg/330px-Destruction_of_opium_in_1839.jpg"
-  },
-  {
-    "id": "item8",
-    "time": " 1600–1750 ",
-    "name": "Bankruptcy of the Dutch East India Company",
-    "intro": "The British East India Company (EIC) was arguably the most powerful megacorporation in human history. At its peak, it commanded its own private army of over 250,000 soldiers, ruled over millions of subjects, and monopolized global trade in tea, silk, and opium. Yet, this \"empire within an empire\" did not end in triumph—it collapsed under the weight of corruption, unsustainable debt, and political intervention.",
-    "detail": "The British East India Company (EIC) was arguably the most powerful megacorporation in human history. At its peak, it commanded its own private army of over 250,000 soldiers, ruled over millions of subjects, and monopolized global trade in tea, silk, and opium. Yet, this \"empire within an empire\" did not end in triumph—it collapsed under the weight of corruption, unsustainable debt, and political intervention.//nThe downfall of the EIC was a century-long corporate unraveling driven by three fatal phases:",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Flag_of_the_Dutch_East_India_Company.svg/330px-Flag_of_the_Dutch_East_India_Company.svg.png"
-  },
-  {
-    "id": "item9",
     "time": "600–1453",
     "name": "Silk Road Trade",
     "intro": "The Silk Road was a big trade route that connected Asia, Europe, Africa, and the Middle East. Traders sold things like silk, spices, gold, and porcelain. It was not only about trading stuff because religions and new ideas also spread on the Silk Road.",
@@ -72,7 +8,15 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Silk_route_chinese.jpg/330px-Silk_route_chinese.jpg"
   },
   {
-    "id": "item10",
+    "id": "item2",
+    "time": "700s–1300s",
+    "name": "Islam (World's Three Major Religions)",
+    "intro": "Unifying the Arab Peninsula and shaping global culture through science and art. It is a complete framework for society, politics, and daily life.",
+    "detail": "Islam, one of the world's three major religions, has profoundly shaped the global religious, political, economic, and cultural landscape. It not only unified the Arabian Peninsula but also created a flourishing Islamic civilization in the Middle Ages, exerting a profound influence on human society in the fields of science, art, and philosophy. Islamic doctrine is not merely a belief system but constitutes a complete framework encompassing society, politics, and daily life.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Supplicating_Pilgrim_at_Masjid_Al_Haram._Mecca%2C_Saudi_Arabia.jpg/330px-Supplicating_Pilgrim_at_Masjid_Al_Haram._Mecca%2C_Saudi_Arabia.jpg"
+  },
+  {
+    "id": "item3",
     "time": "1206–1368",
     "name": "Pax Mongolica",
     "intro": "During Pax Mongolica, the Mongol Empire controlled a huge amount of land. They made the Silk Road safer, so traders and travelers could travel more easily. Because of this, trade between East and West became bigger.",
@@ -80,7 +24,15 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Caravane_Marco_Polo.jpg/330px-Caravane_Marco_Polo.jpg"
   },
   {
-    "id": "item11",
+    "id": "item4",
+    "time": "1300–1350",
+    "name": "The Black Death",
+    "intro": "A catastrophic plague that claimed millions of lives, shrouding Europe in fear. Doctors wore bird-masked masks based on limited knowledge.",
+    "detail": "The Black Death, which broke out in the 14th century, was the most devastating plague in European history. At the time, medicine was primitive, and people knew nothing about how the virus spread. Those infected developed symptoms such as high fever and lumps, and died rapidly within days. This catastrophe claimed tens of millions of lives, reduced countless towns to ruins, and shrouded the entire country in fear of divine retribution. Doctors wore bird-beak masks, believing this would prevent infection—a undoubtedly flawed decision given the limited medical knowledge available at the time.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Paul_F%C3%BCrst%2C_Der_Doctor_Schnabel_von_Rom_%28coloured_version%29.png/250px-Paul_F%C3%BCrst%2C_Der_Doctor_Schnabel_von_Rom_%28coloured_version%29.png"
+  },
+  {
+    "id": "item5",
     "time": "1492",
     "name": "Columbus Reaches the Americas",
     "intro": "When Christopher Columbus reached the Americas in 1492, it changed history a lot. This started the Columbian Exchange, where plants, animals, and ideas moved between Europe and the Americas.",
@@ -88,11 +40,59 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Map_of_America_by_Sebastian_Munster.JPG/330px-Map_of_America_by_Sebastian_Munster.JPG"
   },
   {
-    "id": "item12",
+    "id": "item6",
     "time": "1500–1750",
     "name": "Age of Exploration and Global Trade",
     "intro": "During the Age of Exploration, countries like Spain, Portugal, England, and the Netherlands explored new sea routes around the world. Trade became much bigger, and goods like sugar, tea, silver, and spices were traded between continents.",
     "detail": "During the Age of Exploration, countries like Spain, Portugal, England, and the Netherlands explored new sea routes around the world. Trade became much bigger, and goods like sugar, tea, silver, and spices were traded between continents.\\n\\nThis helped connect Europe, Africa, Asia, and the Americas together. It also helped create the global economy we have today. However, there were many negative effects too, especially colonization and the slave trade. Millions of Africans were forced into slavery, which was very unfair and cruel. I think this time period helped global trade grow, but it also caused many problems for people.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/World-airline-routemap-2009.png/330px-World-airline-routemap-2009.png"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/OrteliusWorldMap.jpeg"
+  },
+  {
+    "id": "item7",
+    "time": "1600–1750",
+    "name": "Bankruptcy of the Dutch East India Company",
+    "intro": "The British East India Company (EIC) was arguably the most powerful megacorporation in human history. At its peak, it commanded its own private army of over 250,000 soldiers, ruled over millions of subjects, and monopolized global trade in tea, silk, and opium. Yet, this \"empire within an empire\" did not end in triumph—it collapsed under the weight of corruption, unsustainable debt, and political intervention.",
+    "detail": "The British East India Company (EIC) was arguably the most powerful megacorporation in human history. At its peak, it commanded its own private army of over 250,000 soldiers, ruled over millions of subjects, and monopolized global trade in tea, silk, and opium. Yet, this \"empire within an empire\" did not end in triumph—it collapsed under the weight of corruption, unsustainable debt, and political intervention.//nThe downfall of the EIC was a century-long corporate unraveling driven by three fatal phases:",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Flag_of_the_Dutch_East_India_Company.svg/330px-Flag_of_the_Dutch_East_India_Company.svg.png"
+  },
+  {
+    "id": "item8",
+    "time": "1630–1636",
+    "name": "Nurhaci (Later Jin Dynasty)",
+    "intro": "Rising from the Jurchen people through rebellion and dynastic change, establishing a nationwide regime during the Ming dynasty's fall.",
+    "detail": "Nurhaci started his rebellion with thirteen suits of armor, unified the Jurchen people, and established the Later Jin dynasty. His son, Huang Taiji, changed the dynasty name to Qing and the ethnic name to Manchu. During the reign of Emperor Shunzhi, taking advantage of Li Zicheng's entry into Beijing and the fall of the Ming dynasty, the Qing army entered the pass and seized the opportunity to establish a nationwide regime.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/%E6%B8%85_%E4%BD%9A%E5%90%8D_%E3%80%8A%E6%B8%85%E5%A4%AA%E7%A5%96%E5%A4%A9%E5%91%BD%E7%9A%87%E5%B8%9D%E6%9C%9D%E6%9C%8D%E5%83%8F%E3%80%8B_1361x1869.jpg/960px-%E6%B8%85_%E4%BD%9A%E5%90%8D_%E3%80%8A%E6%B8%85%E5%A4%AA%E7%A5%96%E5%A4%A9%E5%91%BD%E7%9A%87%E5%B8%9D%E6%9C%9D%E6%9C%8D%E5%83%8F%E3%80%8B_1361x1869.jpg"
+  },
+  {
+    "id": "item9",
+    "time": "1700–1840",
+    "name": "Trade of qing goods",
+    "intro": "In the 18th century, the Qing Dynasty was the ultimate engine of global commerce. Driven by an insatiable Western demand for tea, silk, and porcelain, China maintained a massive trade surplus that effectively reshaped the world economy.",
+    "detail": "In the 18th century, the Qing Dynasty was the ultimate engine of global commerce. Driven by an insatiable Western demand for tea, silk, and porcelain, China maintained a massive trade surplus that effectively reshaped the world economy.//nThe Silver Magnet: To buy Chinese goods, European and American merchants drained the silver mines of the New World. This massive flow of bullion created the first truly globalized, interdependent monetary network centered around Chinese demand.//nGeopolitical Realignment: The desperate British need to stop this \"silver drain\" led directly to the cultivation of opium in India, flipping global trade routes and triggering the rise of modern industrial empires.//nUltimately, before the Industrial Revolution, the gravity of the global economy centered firmly on the Chinese marketplace, pulling the wealth of the entire planet into its orbit.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/UrumqiWarrior.jpg/120px-UrumqiWarrior.jpg"
+  },
+  {
+    "id": "item10",
+    "time": "1837–1901",
+    "name": "The British Empire",
+    "intro": "Known as \"the sun never sets,\" its rise was built on slave trade and colonial expansion. Today, it remains a loose union with unresolved museum debates.",
+    "detail": "The British Empire, once the largest empire in history, was known as the \"Empire on which the sun never sets.\" Its rise was built on the slave trade and the East India Company. During the Victorian era, as European powers carved up Africa, the British Empire reached its zenith. Britain gained independence in 1947; Hong Kong returned to China in 1997. Today, the Commonwealth is a loose union, but the debate over whether the British Museum should return its collections remains unresolved.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/330px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+  },
+  {
+    "id": "item11",
+    "time": "1839",
+    "name": "Destruction of opium at Humen",
+    "intro": "The Destruction of Opium at Humen (June 3 – June 25, 1839) was a monumental event in modern Chinese history, signaling the first major resistance against foreign encroachment and the illegal drug trade. Conducted by Imperial Commissioner Lin Zexu (林则徐) on the beaches of Humen, Guangdong, the 23-day operation successfully destroyed nearly 2.4 million pounds of illegal opium confiscated from British and American smugglers.",
+    "detail": "The Destruction of Opium at Humen (June 3 – June 25, 1839) was a monumental event in modern Chinese history, signaling the first major resistance against foreign encroachment and the illegal drug trade. Conducted by Imperial Commissioner Lin Zexu (林则徐) on the beaches of Humen, Guangdong, the 23-day operation successfully destroyed nearly 2.4 million pounds of illegal opium confiscated from British and American smugglers.//nWhile a massive triumph for anti-narcotics, this bold act directly triggered the First Opium War.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Destruction_of_opium_in_1839.jpg/330px-Destruction_of_opium_in_1839.jpg"
+  },
+  {
+    "id": "item12",
+    "time": "1839–1842",
+    "name": "Opium war",
+    "intro": "The Opium War (1839–1842) was a pivotal turning point that violently dragged the Qing Dynasty into the modern global era. Driven by British merchants smuggling opium into China to reverse a massive trade deficit, the drug crisis quickly devastated Chinese society and drained the empire's silver reserves.",
+    "detail": "The Opium War (1839–1842) was a pivotal turning point that violently dragged the Qing Dynasty into the modern global era. Driven by British merchants smuggling opium into China to reverse a massive trade deficit, the drug crisis quickly devastated Chinese society and drained the empire's silver reserves.//nIn 1839, the Qing government took a stand. Emperor Daoguang appointed Lin Zexu (林则徐) as a special commissioner to Guangzhou. Lin acted aggressively, confiscating and destroying over 20,000 chests of British opium at Humen beach.//nBritain responded with gunboat diplomacy. Utilizing advanced steam-powered warships and modern artillery, the British military easily overwhelmed the outdated Qing forces along the coast.//nThe conflict ended with the Treaty of Nanjing (1842), the first of the \"Unequal Treaties.\" It forced the Qing Dynasty to:",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Destroying_Chinese_war_junks%2C_by_E._Duncan_%281843%29.jpg/330px-Destroying_Chinese_war_junks%2C_by_E._Duncan_%281843%29.jpg"
   }
 ]
